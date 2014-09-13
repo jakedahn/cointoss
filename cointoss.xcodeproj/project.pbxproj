@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA3C64C119A869BC004A21E4 /* proximanova-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA4BD3FD19A8693E00B589CD /* proximanova-bold.otf */; };
 		BA4A2E8919A8490D00DAAB06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4A2E8819A8490D00DAAB06 /* AppDelegate.swift */; };
 		BA4A2E8B19A8490D00DAAB06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4A2E8A19A8490D00DAAB06 /* ViewController.swift */; };
 		BA4A2E8E19A8490D00DAAB06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4A2E8C19A8490D00DAAB06 /* Main.storyboard */; };
 		BA4A2E9019A8490D00DAAB06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4A2E8F19A8490D00DAAB06 /* Images.xcassets */; };
 		BA4A2E9C19A8490E00DAAB06 /* cointossTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4A2E9B19A8490E00DAAB06 /* cointossTests.swift */; };
+		BA4BD3FB19A8678B00B589CD /* proximanova-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA4BD3F919A8677F00B589CD /* proximanova-regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA4A2E8319A8490D00DAAB06 /* cointoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cointoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4A2E8319A8490D00DAAB06 /* cointossr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cointossr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4A2E8719A8490D00DAAB06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA4A2E8819A8490D00DAAB06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA4A2E8A19A8490D00DAAB06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		BA4A2E9519A8490E00DAAB06 /* cointossTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cointossTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4A2E9A19A8490E00DAAB06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA4A2E9B19A8490E00DAAB06 /* cointossTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cointossTests.swift; sourceTree = "<group>"; };
+		BA4BD3F919A8677F00B589CD /* proximanova-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-regular.otf"; path = "fonts/proximanova-regular.otf"; sourceTree = SOURCE_ROOT; };
+		BA4BD3FD19A8693E00B589CD /* proximanova-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-bold.otf"; path = "fonts/proximanova-bold.otf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 		BA4A2E8419A8490D00DAAB06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA4A2E8319A8490D00DAAB06 /* cointoss.app */,
+				BA4A2E8319A8490D00DAAB06 /* cointossr.app */,
 				BA4A2E9519A8490E00DAAB06 /* cointossTests.xctest */,
 			);
 			name = Products;
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BA4A2E8719A8490D00DAAB06 /* Info.plist */,
+				BA4A2EA719A864DE00DAAB06 /* Fonts */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -109,12 +114,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA4A2EA719A864DE00DAAB06 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BA4BD3FD19A8693E00B589CD /* proximanova-bold.otf */,
+				BA4BD3F919A8677F00B589CD /* proximanova-regular.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA4A2E8219A8490D00DAAB06 /* cointoss */ = {
+		BA4A2E8219A8490D00DAAB06 /* cointossr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA4A2E9F19A8490E00DAAB06 /* Build configuration list for PBXNativeTarget "cointoss" */;
+			buildConfigurationList = BA4A2E9F19A8490E00DAAB06 /* Build configuration list for PBXNativeTarget "cointossr" */;
 			buildPhases = (
 				BA4A2E7F19A8490D00DAAB06 /* Sources */,
 				BA4A2E8019A8490D00DAAB06 /* Frameworks */,
@@ -124,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = cointoss;
+			name = cointossr;
 			productName = cointoss;
-			productReference = BA4A2E8319A8490D00DAAB06 /* cointoss.app */;
+			productReference = BA4A2E8319A8490D00DAAB06 /* cointossr.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BA4A2E9419A8490E00DAAB06 /* cointossTests */ = {
@@ -158,6 +172,7 @@
 				TargetAttributes = {
 					BA4A2E8219A8490D00DAAB06 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 4X8FDALG8N;
 					};
 					BA4A2E9419A8490E00DAAB06 = {
 						CreatedOnToolsVersion = 6.0;
@@ -178,7 +193,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA4A2E8219A8490D00DAAB06 /* cointoss */,
+				BA4A2E8219A8490D00DAAB06 /* cointossr */,
 				BA4A2E9419A8490E00DAAB06 /* cointossTests */,
 			);
 		};
@@ -189,6 +204,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3C64C119A869BC004A21E4 /* proximanova-bold.otf in Resources */,
+				BA4BD3FB19A8678B00B589CD /* proximanova-regular.otf in Resources */,
 				BA4A2E8E19A8490D00DAAB06 /* Main.storyboard in Resources */,
 				BA4A2E9019A8490D00DAAB06 /* Images.xcassets in Resources */,
 			);
@@ -226,7 +243,7 @@
 /* Begin PBXTargetDependency section */
 		BA4A2E9719A8490E00DAAB06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BA4A2E8219A8490D00DAAB06 /* cointoss */;
+			target = BA4A2E8219A8490D00DAAB06 /* cointossr */;
 			targetProxy = BA4A2E9619A8490E00DAAB06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -302,7 +319,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jake Dahn (4X8FDALG8N)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -315,6 +332,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "52bdf35b-04dc-4ff5-be0b-977c8470c251";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -325,7 +343,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = cointoss/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -336,9 +356,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jake Dahn (4X8FDALG8N)";
 				INFOPLIST_FILE = cointoss/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "52bdf35b-04dc-4ff5-be0b-977c8470c251";
 			};
 			name = Release;
 		};
@@ -388,13 +412,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA4A2E9F19A8490E00DAAB06 /* Build configuration list for PBXNativeTarget "cointoss" */ = {
+		BA4A2E9F19A8490E00DAAB06 /* Build configuration list for PBXNativeTarget "cointossr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA4A2EA019A8490E00DAAB06 /* Debug */,
 				BA4A2EA119A8490E00DAAB06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA4A2EA219A8490E00DAAB06 /* Build configuration list for PBXNativeTarget "cointossTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +428,7 @@
 				BA4A2EA419A8490E00DAAB06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
