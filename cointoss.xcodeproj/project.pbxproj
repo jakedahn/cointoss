@@ -38,6 +38,7 @@
 		BA4A2E9B19A8490E00DAAB06 /* cointossTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cointossTests.swift; sourceTree = "<group>"; };
 		BA4BD3F919A8677F00B589CD /* proximanova-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-regular.otf"; path = "fonts/proximanova-regular.otf"; sourceTree = SOURCE_ROOT; };
 		BA4BD3FD19A8693E00B589CD /* proximanova-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-bold.otf"; path = "fonts/proximanova-bold.otf"; sourceTree = SOURCE_ROOT; };
+		BAD60D391AE8AE6600F098D9 /* randomtest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = randomtest.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		BA4A2E7A19A8490D00DAAB06 = {
 			isa = PBXGroup;
 			children = (
+				BAD60D391AE8AE6600F098D9 /* randomtest.playground */,
 				BA4A2E8519A8490D00DAAB06 /* cointoss */,
 				BA4A2E9819A8490E00DAAB06 /* cointossTests */,
 				BA4A2E8419A8490D00DAAB06 /* Products */,
@@ -343,11 +345,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jake Dahn (4X8FDALG8N)";
 				INFOPLIST_FILE = cointoss/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b4955a99-978f-4662-8032-a007d765de33";
 			};
 			name = Debug;
 		};
@@ -356,13 +360,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jake Dahn (4X8FDALG8N)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jake Dahn (4X8FDALG8N)";
 				INFOPLIST_FILE = cointoss/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "52bdf35b-04dc-4ff5-be0b-977c8470c251";
+				PROVISIONING_PROFILE = "b4955a99-978f-4662-8032-a007d765de33";
 			};
 			name = Release;
 		};
@@ -381,7 +385,7 @@
 				INFOPLIST_FILE = cointossTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cointoss.app/cointoss";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cointossr.app/cointossr";
 			};
 			name = Debug;
 		};
@@ -396,7 +400,7 @@
 				INFOPLIST_FILE = cointossTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cointoss.app/cointoss";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cointossr.app/cointossr";
 			};
 			name = Release;
 		};

@@ -10,72 +10,89 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.activityIndicator.alpha = 0
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     @IBOutlet weak var resultLabel: UILabel!
 
-    var tossBtnView: UIView!
-//    var back: UIImageView!
-    var front: UIImageView!
-    var showingBack = false
+    @IBOutlet weak var tossBtn: UIButton!
+    @IBOutlet weak var trialStatus: UILabel!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var result: UILabel!
+    
+    
+    @IBAction func tossHandler(sender: AnyObject) {
+        self.activityIndicator.startAnimating()
 
-    func toss(){
-
-        UIView.animateWithDuration(0.2, delay: 0.2, options: UIViewAnimationOptions.TransitionFlipFromBottom, animations: {
-            self.tossBtnView.alpha = 0.5
-        }, completion: nil)
+        UIView.animateWithDuration(0.3,
+            delay: 0,
+            options: .CurveLinear & .AllowUserInteraction & .BeginFromCurrentState,
+            animations: {
+                self.tossBtn.alpha = 0
+                self.activityIndicator.alpha = 1
+            }, completion: nil)
 
         
+        
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.tossBtn.enabled = false
+            let (tossResult, headsCount, tailsCount) = self.toss()
+            sleep(1)
+
+            dispatch_async(dispatch_get_main_queue()) {
+                UIView.animateWithDuration(0.3,
+                    delay: 0,
+                    options: .CurveLinear & .AllowUserInteraction & .BeginFromCurrentState,
+                    animations: {
+                        self.tossBtn.alpha = 1
+                        self.activityIndicator.alpha = 0
+                    }, completion: nil)
+
+                self.resultLabel.text = "\(headsCount) heads | \(tailsCount) tails"
+                self.result.text = "\(tossResult)"
+                self.tossBtn.enabled = true
+                self.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    
+    func toss() -> (result: String, headsCount: Int, tailsCount: Int) {
+
         var headsList: [Int] = []
         var tailsList: [Int] = []
+        var tossCount = 1000
         
-        for i in 1...100000 {
-            if arc4random_uniform(2) == 0 {
+        for i in 1...tossCount {
+            if (arc4random_uniform(2) == 0) {
                 headsList.append(1)
             } else {
                 tailsList.append(1)
             }
         }
-        
+
+        var labeltext = ""
         if headsList.count > tailsList.count {
-            self.resultLabel.text = "Heads"
+            labeltext = "Heads"
         }
         if headsList.count < tailsList.count {
-            self.resultLabel.text = "Tails"
+           labeltext = "Tails"
         }
         if headsList.count == tailsList.count {
-            self.resultLabel.text = "Tie"
+            labeltext = "Tie"
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let screenSize: CGRect = UIScreen.mainScreen().bounds
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-
-
-        let headsImg = UIImage(named: "tossbtn")
-//        let tailsImg = UIImage(named: "tossbtn-tails")
-
-        let front = UIImageView(image: headsImg)
-//        let back = UIImageView(image: tailsImg)
         
-        let rect = CGRectMake(CGFloat(screenWidth * 0.5 - headsImg.size.width/2), CGFloat(screenHeight * 0.7), headsImg.size.width, headsImg.size.height)
-
-        let singleTap = UITapGestureRecognizer(target: self, action: Selector("toss"))
-        singleTap.numberOfTapsRequired = 1
-
-        tossBtnView = UIView(frame: rect)
-        tossBtnView.addGestureRecognizer(singleTap)
-//        tossBtnView.addSubview(back)
-        tossBtnView.addSubview(front)
-        view.addSubview(tossBtnView)
+        return (labeltext, headsList.count, tailsList.count)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
 
 }
 
