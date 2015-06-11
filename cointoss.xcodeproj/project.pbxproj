@@ -14,6 +14,8 @@
 		BA4A2E9019A8490D00DAAB06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4A2E8F19A8490D00DAAB06 /* Images.xcassets */; };
 		BA4A2E9C19A8490E00DAAB06 /* cointossTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4A2E9B19A8490E00DAAB06 /* cointossTests.swift */; };
 		BA4BD3FB19A8678B00B589CD /* proximanova-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA4BD3F919A8677F00B589CD /* proximanova-regular.otf */; };
+		BAFBCF0B1B2407B500223771 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFBCF091B2407B500223771 /* Fabric.framework */; };
+		BAFBCF0C1B2407B500223771 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFBCF0A1B2407B500223771 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		BA4BD3F919A8677F00B589CD /* proximanova-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-regular.otf"; path = "fonts/proximanova-regular.otf"; sourceTree = SOURCE_ROOT; };
 		BA4BD3FD19A8693E00B589CD /* proximanova-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-bold.otf"; path = "fonts/proximanova-bold.otf"; sourceTree = SOURCE_ROOT; };
 		BAD60D391AE8AE6600F098D9 /* randomtest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = randomtest.playground; sourceTree = "<group>"; };
+		BAFBCF091B2407B500223771 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		BAFBCF0A1B2407B500223771 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFBCF0C1B2407B500223771 /* Crashlytics.framework in Frameworks */,
+				BAFBCF0B1B2407B500223771 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 				BA4A2E8519A8490D00DAAB06 /* cointoss */,
 				BA4A2E9819A8490E00DAAB06 /* cointossTests */,
 				BA4A2E8419A8490D00DAAB06 /* Products */,
+				BAFBCF091B2407B500223771 /* Fabric.framework */,
+				BAFBCF0A1B2407B500223771 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +143,7 @@
 				BA4A2E7F19A8490D00DAAB06 /* Sources */,
 				BA4A2E8019A8490D00DAAB06 /* Frameworks */,
 				BA4A2E8119A8490D00DAAB06 /* Resources */,
+				BAFBCF081B24077600223771 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -221,6 +230,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BAFBCF081B24077600223771 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 603c71ee1f4f63c23038cdfbaae656834657af2d 8beda60fd6e51f11a012f394526bd7e0580f0f40b47a9eeadb246c10c3bc9680";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA4A2E7F19A8490D00DAAB06 /* Sources */ = {
@@ -345,13 +370,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jake Dahn (4X8FDALG8N)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jake Dahn (G5ZM8459WY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jake Dahn (G5ZM8459WY)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = cointoss/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b4955a99-978f-4662-8032-a007d765de33";
+				PROVISIONING_PROFILE = "b9847982-1daf-4522-bed8-41c0188915b9";
 			};
 			name = Debug;
 		};
@@ -362,11 +391,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jake Dahn (4X8FDALG8N)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jake Dahn (4X8FDALG8N)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = cointoss/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b4955a99-978f-4662-8032-a007d765de33";
+				PROVISIONING_PROFILE = "b9847982-1daf-4522-bed8-41c0188915b9";
 			};
 			name = Release;
 		};
